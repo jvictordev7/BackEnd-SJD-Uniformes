@@ -1,0 +1,39 @@
+# Compiled class files and packaged archives
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Build output
+bin/
+build/
+out/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+
+# IDE settings
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+# Maven and Gradle wrappers (keep scripts, ignore binaries)
+.mvn/wrapper/maven-wrapper.jar
+/.gradle/
+
+# OS-specific files
+Thumbs.db
+ehthumbs.db
+
+# Local environment files
+.env
+.env.*
+
