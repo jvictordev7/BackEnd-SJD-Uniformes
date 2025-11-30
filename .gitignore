@@ -1,39 +1,33 @@
-# Compiled class files and packaged archives
+HELP.md
 target/
-*.class
-*.jar
-*.war
-*.ear
-
-# Build output
-bin/
-build/
-out/
-
-# Logs and temporary files
-*.log
-*.tmp
-*.swp
-*.swo
-*.DS_Store
-
-# IDE settings
-.idea/
-*.iml
-.classpath
-.project
-.settings/
-.vscode/
-
-# Maven and Gradle wrappers (keep scripts, ignore binaries)
 .mvn/wrapper/maven-wrapper.jar
-/.gradle/
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# OS-specific files
-Thumbs.db
-ehthumbs.db
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-# Local environment files
-.env
-.env.*
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
