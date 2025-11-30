@@ -1,0 +1,14 @@
+package br.com.sjduniformes.dto.pedido;
+
+import java.math.BigDecimal;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class PagamentoRequestDTO {
+    private BigDecimal valor;
+    private String formaPagamento; // exemplo: PIX, CARTAO, DINHEIRO
+}
