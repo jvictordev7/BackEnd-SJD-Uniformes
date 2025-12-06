@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 public class PedidoResponseDTO {
     private String numeroPedido;
     private Long pedidoId;
+    private Long clienteId;
     private String nomeCliente;
     private LocalDateTime dataCriacao;
     private LocalDate dataEntrega;
@@ -36,6 +37,7 @@ public class PedidoResponseDTO {
     @NoArgsConstructor
     @AllArgsConstructor
     public static class PedidoItemResponseDTO {
+        private Long produtoId;
         private String nomeProduto;
         private Integer quantidade;
         private BigDecimal valorUnitario;

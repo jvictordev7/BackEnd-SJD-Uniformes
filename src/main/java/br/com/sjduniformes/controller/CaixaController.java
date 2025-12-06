@@ -30,6 +30,11 @@ public class CaixaController {
         return ResponseEntity.ok(caixaLancamentoService.calcularResumo());
     }
 
+    @PostMapping("/saida")
+    public ResponseEntity<CaixaLancamento> lancarSaidaAtalho(@RequestBody CaixaSaidaRequest request) {
+        return ResponseEntity.ok(caixaLancamentoService.registrarSaida(request));
+    }
+
     @PostMapping("/lancamentos/saida")
     public ResponseEntity<CaixaLancamento> lancarSaida(@RequestBody CaixaSaidaRequest request) {
         return ResponseEntity.ok(caixaLancamentoService.registrarSaida(request));

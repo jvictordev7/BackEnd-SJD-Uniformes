@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -44,8 +45,19 @@ public class PedidoController {
         return ResponseEntity.ok(pedidoService.alterarEtapa(id, request.getEtapaProducao()));
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<PedidoResponseDTO> atualizar(@PathVariable Long id, @RequestBody PedidoRequestDTO request) {
+        return ResponseEntity.ok(pedidoService.atualizarPedido(id, request));
+    }
+
     @PutMapping("/{id}/pagamento")
     public ResponseEntity<PedidoResponseDTO> registrarPagamento(@PathVariable Long id, @RequestBody RegistroPagamentoDTO pagamento) {
         return ResponseEntity.ok(pedidoService.registrarPagamento(id, pagamento));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> excluir(@PathVariable Long id) {
+        pedidoService.excluirPedido(id);
+        return ResponseEntity.noContent().build();
     }
 }
